@@ -82,7 +82,7 @@ export async function GET(request: Request) {
       
       return Response.json(
         { success: true, message: 'User not found' },
-        { status: 404 }
+        { status: 200 }
       );
     }
 
