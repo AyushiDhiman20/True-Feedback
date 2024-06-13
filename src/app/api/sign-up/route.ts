@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     }
 
     const existingUserByEmail = await UserModel.findOne({ email });
-    let verifyCode =112233
+    let verifyCode =123456
 
     if (existingUserByEmail) {
       if (existingUserByEmail.isVerified) {
