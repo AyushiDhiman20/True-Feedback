@@ -20,12 +20,12 @@ export async function POST(request: Request) {
           success: false,
           message: 'Username is already taken',
         },
-        { status: 400 }
+        { status: 400 }  
       );
     }
 
     const existingUserByEmail = await UserModel.findOne({ email });
-    let verifyCode = 123456
+    let verifyCode =1230
 
     if (existingUserByEmail) {
       if (existingUserByEmail.isVerified) {
