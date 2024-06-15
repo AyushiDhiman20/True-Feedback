@@ -27,8 +27,8 @@ export async function GET(request: Request) {
 
     if (!user || user.length === 0) {
       return Response.json(
-        { message: 'User not found', success: true },
-        { status: 200 }
+        { message: 'User not found', success: false },
+        { status: 404 }
       );
     }
 
